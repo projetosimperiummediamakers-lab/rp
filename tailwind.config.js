@@ -2,9 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./App.tsx",
-    "./index.tsx",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -19,23 +17,7 @@ export default {
         'brand-gray-light': '#f3f4f6',
         'brand-gray-dark': '#1f2937',
       },
-      textShadow: {
-        DEFAULT: '0 2px 4px rgba(0,0,0,0.10)',
-        lg: '0 4px 8px rgba(0,0,0,0.20)',
-      },
     },
   },
-  plugins: [
-    function({ addUtilities }) {
-        const newUtilities = {
-            '.text-shadow': {
-                textShadow: '0 2px 4px rgba(0,0,0,0.10)',
-            },
-            '.text-shadow-lg': {
-                textShadow: '0 4px 8px rgba(0,0,0,0.20)',
-            }
-        }
-        addUtilities(newUtilities)
-    }
-  ],
+  plugins: [],
 }

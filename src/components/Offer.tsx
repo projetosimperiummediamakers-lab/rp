@@ -38,26 +38,27 @@ const Offer: React.FC = () => {
                 <div className="mt-16 text-left">
                     <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Ao garantir seu acesso hoje, você também recebe 3 bônus exclusivos (no valor de R$291):</h3>
                     <div className="space-y-4 max-w-2xl mx-auto">
-                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><BookOpenCheck /></div>
-                                <div>
-                                    <h4 className="font-bold">{bonuses[0].title}</h4>
-                                    <p className="text-sm text-purple-200">{bonuses[0].description}</p>
-                                </div>
+                        <div className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
+                            <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><BookOpenCheck /></div>
+                            <div>
+                                <h4 className="font-bold">{bonuses[0].title}</h4>
+                                <p className="text-sm text-purple-200">{bonuses[0].description}</p>
                             </div>
-                            <div key={1} className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
-                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><GlassWater /></div>
-                                <div>
-                                    <h4 className="font-bold">{bonuses[1].title}</h4>
-                                    <p className="text-sm text-purple-200">{bonuses[1].description}</p>
-                                </div>
+                        </div>
+                        <div className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
+                            <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><GlassWater /></div>
+                            <div>
+                                <h4 className="font-bold">{bonuses[1].title}</h4>
+                                <p className="text-sm text-purple-200">{bonuses[1].description}</p>
                             </div>
-                            <div key={2} className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
-                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><ShoppingCart /></div>
-                                <div>
-                                    <h4 className="font-bold">{bonuses[2].title}</h4>
-                                    <p className="text-sm text-purple-200">{bonuses[2].description}</p>
-                                </div>
-                            </div>}
+                        </div>
+                        <div className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
+                            <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><ShoppingCart /></div>
+                            <div>
+                                <h4 className="font-bold">{bonuses[2].title}</h4>
+                                <p className="text-sm text-purple-200">{bonuses[2].description}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
