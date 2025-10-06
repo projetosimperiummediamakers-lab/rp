@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 const faqData = [
     {
@@ -39,10 +40,9 @@ const FaqItem: React.FC<FaqItemProps> = ({ item, isOpen, onClick }) => {
                 aria-expanded={isOpen}
             >
                 <span>{item.question}</span>
-                <i
-                    data-lucide="chevron-down"
+                <ChevronDown
                     className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-                ></i>
+                />
             </button>
             <div
                 ref={answerRef}

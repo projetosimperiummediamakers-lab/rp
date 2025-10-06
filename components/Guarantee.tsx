@@ -1,4 +1,5 @@
 import React from 'react';
+import { ShieldCheck } from 'lucide-react';
 
 const Guarantee: React.FC = () => {
     return (
@@ -6,7 +7,7 @@ const Guarantee: React.FC = () => {
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="flex flex-col md:flex-row items-center gap-8 bg-brand-gray-light p-8 rounded-2xl border-2 border-dashed border-brand-purple-light">
                     <div className="flex-shrink-0 w-36 h-36 bg-brand-purple-extralight rounded-full flex items-center justify-center shadow-inner">
-                        <i data-lucide="shield-check" className="w-24 h-24 text-brand-purple"></i>
+                        <ShieldCheck className="w-24 h-24 text-brand-purple" />
                     </div>
                     <div className="text-center md:text-left">
                         <h2 className="text-2xl font-extrabold text-brand-purple-dark mb-2">Seu Risco é ZERO!</h2>

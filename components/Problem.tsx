@@ -1,4 +1,5 @@
 import React from 'react';
+import { Annoyed, Wind, BatteryLow, Frown, Pill, Scale } from 'lucide-react';
 
 const problems = [
     { icon: "annoyed", text: "Barriga sempre inchada e dolorida." },
@@ -9,12 +10,24 @@ const problems = [
     { icon: "scale", text: "Dificuldade para emagrecer." },
 ];
 
-const ProblemCard: React.FC<{ icon: string; text: string }> = ({ icon, text }) => (
-    <div className="bg-white p-6 rounded-xl shadow-md flex items-center space-x-4 transition-transform duration-300 hover:-translate-y-1 cursor-default">
-        <i data-lucide={icon} className="w-10 h-10 text-brand-purple flex-shrink-0"></i>
-        <p className="text-left font-semibold text-brand-gray-dark">{text}</p>
-    </div>
-);
+const iconComponents: { [key: string]: React.ElementType } = {
+    annoyed: Annoyed,
+    wind: Wind,
+    "battery-low": BatteryLow,
+    frown: Frown,
+    pill: Pill,
+    scale: Scale,
+};
+
+const ProblemCard: React.FC<{ icon: string; text: string }> = ({ icon, text }) => {
+    const IconComponent = iconComponents[icon];
+    return (
+        <div className="bg-white p-6 rounded-xl shadow-md flex items-center space-x-4 transition-transform duration-300 hover:-translate-y-1 cursor-default">
+            <IconComponent className="w-10 h-10 text-brand-purple flex-shrink-0" />
+            <p className="text-left font-semibold text-brand-gray-dark">{text}</p>
+        </div>
+    );
+};
 
 const Problem: React.FC = () => {
     return (

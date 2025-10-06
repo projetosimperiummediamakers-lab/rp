@@ -1,4 +1,5 @@
 import React from 'react';
+import { Quote } from 'lucide-react';
 
 const testimonials = [
     {
@@ -23,7 +24,7 @@ const testimonials = [
 
 const TestimonialCard: React.FC<typeof testimonials[0]> = ({ photo, name, details, quote }) => (
     <div className="bg-white p-8 rounded-xl shadow-lg text-left h-full flex flex-col relative overflow-hidden">
-        <i data-lucide="quote" className="w-16 h-16 text-brand-purple-light/30 absolute -top-4 -right-4"></i>
+        <Quote className="w-16 h-16 text-brand-purple-light/30 absolute -top-4 -right-4" />
         <div className="flex items-center mb-4 z-10">
             <img src={photo} className="w-12 h-12 rounded-full mr-4 object-cover" alt={`Foto de ${name}`}></img>
             <div>

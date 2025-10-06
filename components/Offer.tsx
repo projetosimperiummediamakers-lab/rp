@@ -1,4 +1,5 @@
 import React from 'react';
+import { BookOpenCheck, GlassWater, ShoppingCart, Lock, ShieldCheck, Smartphone } from 'lucide-react';
 
 const bonuses = [
     { icon: "book-open-check", title: "Bônus #1: Guia de Alimentos Anti-Inflamatórios", description: "Uma lista completa para desinflamar seu corpo e potencializar os resultados. (Valor R$ 97)" },
@@ -28,24 +29,35 @@ const Offer: React.FC = () => {
                     </a>
                     
                     <div className="flex flex-wrap justify-center items-center gap-4 mt-6 text-sm">
-                        <div className="flex items-center gap-2"><i data-lucide="lock" className="w-4 h-4 text-green-600"></i><span>Pagamento Seguro</span></div>
-                        <div className="flex items-center gap-2"><i data-lucide="shield-check" className="w-4 h-4 text-green-600"></i><span>Garantia de 7 Dias</span></div>
-                        <div className="flex items-center gap-2"><i data-lucide="smartphone" className="w-4 h-4 text-green-600"></i><span>Acesso Vitalício</span></div>
+                        <div className="flex items-center gap-2"><Lock className="w-4 h-4 text-green-600" /><span>Pagamento Seguro</span></div>
+                        <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-green-600" /><span>Garantia de 7 Dias</span></div>
+                        <div className="flex items-center gap-2"><Smartphone className="w-4 h-4 text-green-600" /><span>Acesso Vitalício</span></div>
                     </div>
                 </div>
 
                 <div className="mt-16 text-left">
                     <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">Ao garantir seu acesso hoje, você também recebe 3 bônus exclusivos (no valor de R$291):</h3>
                     <div className="space-y-4 max-w-2xl mx-auto">
-                        {bonuses.map((bonus, index) => (
-                            <div key={index} className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
-                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><i data-lucide={bonus.icon}></i></div>
+                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><BookOpenCheck /></div>
                                 <div>
-                                    <h4 className="font-bold">{bonus.title}</h4>
-                                    <p className="text-sm text-purple-200">{bonus.description}</p>
+                                    <h4 className="font-bold">{bonuses[0].title}</h4>
+                                    <p className="text-sm text-purple-200">{bonuses[0].description}</p>
                                 </div>
                             </div>
-                        ))}
+                            <div key={1} className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
+                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><GlassWater /></div>
+                                <div>
+                                    <h4 className="font-bold">{bonuses[1].title}</h4>
+                                    <p className="text-sm text-purple-200">{bonuses[1].description}</p>
+                                </div>
+                            </div>
+                            <div key={2} className="bg-brand-purple/50 p-5 rounded-lg flex items-start gap-4 border border-brand-purple/70">
+                                <div className="bg-brand-yellow text-brand-purple-dark font-bold rounded-md p-3 flex-shrink-0"><ShoppingCart /></div>
+                                <div>
+                                    <h4 className="font-bold">{bonuses[2].title}</h4>
+                                    <p className="text-sm text-purple-200">{bonuses[2].description}</p>
+                                </div>
+                            </div>}
                     </div>
                 </div>
             </div>
