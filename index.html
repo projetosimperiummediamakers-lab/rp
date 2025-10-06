@@ -4,44 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ameixa App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-purple-extralight': '#f3e8ff',
-              'brand-purple-light': '#e9d5ff',
-              'brand-purple': '#7e22ce',
-              'brand-purple-dark': '#581c87',
-              'brand-yellow': '#fde047',
-              'brand-yellow-dark': '#facc15',
-              'brand-gray': '#4b5563',
-              'brand-gray-light': '#f3f4f6',
-              'brand-gray-dark': '#1f2937',
-            },
-            textShadow: {
-              DEFAULT: '0 2px 4px rgba(0,0,0,0.10)',
-              lg: '0 4px 8px rgba(0,0,0,0.20)',
-            },
-          }
-        },
-        plugins: [
-            function({ addUtilities }) {
-                const newUtilities = {
-                    '.text-shadow': {
-                        textShadow: '0 2px 4px rgba(0,0,0,0.10)',
-                    },
-                    '.text-shadow-lg': {
-                        textShadow: '0 4px 8px rgba(0,0,0,0.20)',
-                    }
-                }
-                addUtilities(newUtilities)
-            }
-        ]
-      }
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
